@@ -3,24 +3,25 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '@modules/Home'
 import Favorites from '@modules/Favorites'
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
-import fonts from '../global/styles/fonts'
+import {theme} from '@global/styles/theme'
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
 const BottomNavigation: React.FC = () => {
+
+  const {secondary80} = theme.colors;
   return (
     <Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: 'red',
+        tabBarActiveTintColor: theme.colors.primary,
         headerShown: false,
         tabBarShowLabel: true,
-        tabBarLabelStyle: {color: 'white', fontSize: 15, fontFamily:fonts.heading},
+        tabBarLabelStyle: {color: 'white', fontSize: 15, fontFamily:theme.fonts.heading},
         tabBarStyle: {
-          backgroundColor: 'black',
+          backgroundColor: secondary80,
+          borderTopColor: secondary80,
           height: 100,
-          borderTopColor: 'white',
-          borderTopWidth: 0.5,
         },
       }}
     >
