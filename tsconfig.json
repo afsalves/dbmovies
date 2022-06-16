@@ -15,6 +15,7 @@
       "@modules/*": ["./src/modules/*"],
       "@styles/*": ["./src/styles/*"],
       "@config/*": ["./src/config/*"],
+      "@global/*": ["./src/global/*"],
     }
   }
 }

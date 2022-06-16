@@ -18,6 +18,7 @@ module.exports = function (api) {
             '@modules': './src/modules',
             '@styles': './src/styles',
             '@utils': './src/utils',
+            '@global': './src/global',
           },
         },
       ],
