@@ -4,8 +4,7 @@ import * as Styled from './styles';
 
 
 
-const Header: React.FC = () => {
-
+export function Header () {
   return (
         <Styled.Container>
           <Styled.Logo>
@@ -18,4 +17,3 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
