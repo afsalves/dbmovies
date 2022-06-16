@@ -9,6 +9,7 @@
       "src": ["./src"],
       "@apis/*": ["./src/apis/*"],
       "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/utils/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@modules/*": ["./src/modules/*"],
