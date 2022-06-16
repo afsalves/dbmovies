@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext } from 'react';
 import {moviesApi} from '@apis/moviesApi'
-import appEnvironments from '../utils/enviroment';
+import appEnvironments from '@utils/enviroments';
 
 
 const apiKey = appEnvironments.apiKey;
