@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import useLastestMovies from '@hooks/useLastestMovies';
+import useDBMovies from '@hooks/useDBMovies';
 import { Background } from '@components/Background';
 import * as Styled from './styles';
-import Header from '@components/Header/Index';
+import {Header} from '@components/Header/Index';
+import {HorizontalCarousel} from '@components/HorizontalCarousel';
 
 
 
 const Home: React.FC = () => {
-  const { getLastestMovies } = useLastestMovies();
-  const [lastestList, setLastestList] = useState({});
+  const { getLastestMovies } = useDBMovies();
+  const [lastestList, setLastestList] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -16,8 +17,7 @@ const Home: React.FC = () => {
       try {
         setLoading(true);
         const data = await getLastestMovies();
-        setLastestList(data);
-        console.log('data', data)
+        setLastestList(data.results);
       } catch (err) {
         console.error(err);
       } finally {
@@ -28,12 +28,12 @@ const Home: React.FC = () => {
   }, [getLastestMovies]);
 
 
-
   return (
       <Background>
         <Styled.Container>
           <Styled.Wrapper>
           <Header />
+          <HorizontalCarousel title = {'Most popular'} data={lastestList}/>
           </Styled.Wrapper>
         </Styled.Container>
       </Background>
