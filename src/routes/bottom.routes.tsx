@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '@modules/Home'
 import Favorites from '@modules/Favorites'
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import fonts from '../global/styles/fonts'
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -14,7 +15,7 @@ const BottomNavigation: React.FC = () => {
         tabBarActiveTintColor: 'red',
         headerShown: false,
         tabBarShowLabel: true,
-        tabBarLabelStyle: {color: 'white', fontSize: 12},
+        tabBarLabelStyle: {color: 'white', fontSize: 15, fontFamily:fonts.heading},
         tabBarStyle: {
           backgroundColor: 'black',
           height: 100,
