@@ -15,7 +15,7 @@ const LastestMoviesContext = createContext<ILastestMoviesContext>({} as ILastest
 export const LastestMoviesProvider: React.FC =({children}) =>{
 
     const getLastestMovies = useCallback(async () =>{
-        const response = await moviesApi.get(`/latest?api_key=${apiKey}`)
+        const response = await moviesApi.get(`/popular?api_key=${apiKey}`)
     return response.data
 }, []);
 
