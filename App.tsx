@@ -1,6 +1,6 @@
 import React from "react";
 import Routes from "./src/routes/routes";
-import {LastestMoviesProvider} from '@hooks/useLastestMovies'
+import {DBMoviesProvider} from '@hooks/useDBMovies'
 import AppLoading from 'expo-app-loading';
 import {
   useFonts,
@@ -18,8 +18,8 @@ export default function App() {
   return <AppLoading />
 
   return (
-    <LastestMoviesProvider>
+    <DBMoviesProvider>
       < Routes />
-    </LastestMoviesProvider>
+    </DBMoviesProvider>
   );
 }
