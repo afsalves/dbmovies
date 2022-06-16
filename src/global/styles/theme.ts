@@ -10,15 +10,13 @@ export const theme = {
       secondary60: '#1B2565',
       secondary50: '#243189', 
       secondary40: '#1D2766', 
-      secondary30: '#495BCC', 
-     
+      secondary30: '#495BCC',
+      secondary20: '#7289da', 
       overlay: 'rgba(0,0,0,0.7)',
       highlight: '#ABB1CC',
       heading: '#DDE3F0',
       line: '#991F36',
       on: '#32BD50',
-  
-      discord: '#7289da',
     },
 
     fonts: {
