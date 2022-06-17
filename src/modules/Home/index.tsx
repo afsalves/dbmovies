@@ -1,23 +1,31 @@
 import React, {useState, useEffect} from 'react';
+import { ActivityIndicator } from 'react-native';
 import useDBMovies from '@hooks/useDBMovies';
 import { Background } from '@components/Background';
-import * as Styled from './styles';
 import {Header} from '@components/Header/Index';
 import {HorizontalCarousel} from '@components/HorizontalCarousel';
+import * as Styled from './styles';
+import {theme} from '@global/styles/theme'
 
 
 
 const Home: React.FC = () => {
-  const { getLastestMovies } = useDBMovies();
+  const { getLastestMovies, getPopularMovies, getTopRatedMovies } = useDBMovies();
   const [lastestList, setLastestList] = useState([]);
+  const [popularList, setPopularList] = useState([]);
+  const [topRatedList, setTopRatedList] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function bootstrap() {
       try {
         setLoading(true);
-        const data = await getLastestMovies();
-        setLastestList(data.results);
+        const lastest = await getLastestMovies();
+        setLastestList(lastest.results);
+        const popular = await getPopularMovies();
+        setPopularList(popular.results);
+        const topRate = await getTopRatedMovies();
+        setTopRatedList(topRate.results);
       } catch (err) {
         console.error(err);
       } finally {
@@ -31,10 +39,18 @@ const Home: React.FC = () => {
   return (
       <Background>
         <Styled.Container>
-          <Styled.Wrapper>
-          <Header />
-          <HorizontalCarousel title = {'Most popular'} data={lastestList}/>
-          </Styled.Wrapper>
+            <Styled.Wrapper>
+              <Header />
+              {loading? (
+                <ActivityIndicator color={theme.colors.primary} />
+              ) : (
+               <>
+                  <HorizontalCarousel title = {'Lastest Movies'} data={lastestList}/>
+                  <HorizontalCarousel title = {'Most Popular'} data={popularList}/>
+                  <HorizontalCarousel title = {'Top Rated'} data={topRatedList}/>
+               </> 
+              )}
+            </Styled.Wrapper>
         </Styled.Container>
       </Background>
   );

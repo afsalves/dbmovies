@@ -16,18 +16,18 @@ export function HorizontalCarousel ({data, title}: Props) {
         <Styled.Title>{title}</Styled.Title>
       </Styled.CategorieWrapper>
       <SwiperFlatList 
-      horizontal
-      style={{ marginTop:20 }}
-      showsHorizontalScrollIndicator={false}
-      data={data}
-      keyExtractor={item => item.id} 
-      renderItem={({ item }) => {
-        const name = item.original_title
-        const rate = item.vote_average
-        const id = item.id
-        return (
-          <CardMovie id={id} name={name}rate={rate}/>
-        )
+        horizontal
+        style={{ marginTop:20 }}
+        showsHorizontalScrollIndicator={false}
+        data={data}
+        keyExtractor={item => item.id} 
+        renderItem={({ item }) => {
+          const name = item.original_title
+          const rate = item.vote_average
+          const id = item.id
+          return (
+            <CardMovie id={id} name={name}rate={rate}/>
+          )
       }}
       />
     </>
