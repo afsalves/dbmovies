@@ -1,15 +1,21 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, Text } from 'react-native';
+import { Background } from '@components/Background';
+import {Header} from '@components/Header/Index';
+import * as Styled from './styles';
 
 
 
 const Favorites: React.FC = () => {
+
+
   return (
-    <SafeAreaView >
-      <ScrollView>
-        <Text>'Favoritos'</Text>
-      </ScrollView>
-    </SafeAreaView>
+      <Background>
+        <Styled.Container>
+            <Header />
+            <Styled.Wrapper showsVerticalScrollIndicator={false}>
+            </Styled.Wrapper>
+        </Styled.Container>
+      </Background>
   );
 };
 
