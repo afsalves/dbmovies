@@ -3,7 +3,7 @@ import {theme} from '@global/styles/theme'
 
 
 export const Container = styled.View `
-    margin-bottom: 20px;
+    margin-top: 20px;
     flex-direction: row;
     width: 100%;
     background-color: transparent;

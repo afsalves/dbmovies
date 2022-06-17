@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '@assets/icons/movie.svg'
+import Logo from '@assets/icons/logo.svg'
 import * as Styled from './styles';
 
 
