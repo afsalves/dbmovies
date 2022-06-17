@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://prnt.sc/JujCJPx2x0Vr" alt="DBMovie" />
+<img width="315" alt="image" src="https://user-images.githubusercontent.com/48930961/174232196-9c102739-f2a9-4690-bedb-b4bb17fa85df.png">
 </p>
 
 ## 💻 Projeto
