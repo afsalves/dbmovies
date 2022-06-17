@@ -1,9 +1,5 @@
 import React, { createContext, useCallback, useContext } from 'react';
 import {moviesApi} from '@apis/moviesApi'
-import appEnvironments from '../config/enviroment';
-
-
-const apiKey = appEnvironments.apiKey;
 
 interface IDBMoviesContext {
     getLastestMovies: () =>Promise<any>
