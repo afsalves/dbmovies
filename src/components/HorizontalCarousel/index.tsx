@@ -30,6 +30,7 @@ export function HorizontalCarousel ({data, title}: Props) {
           )
       }}
       />
+      <CardMovie id={1} name={'Movie'} rate={5.5}/>
     </>
   );
 };

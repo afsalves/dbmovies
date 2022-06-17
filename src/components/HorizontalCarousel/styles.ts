@@ -3,7 +3,7 @@ import {theme} from '@global/styles/theme'
 
 
 export const CategorieWrapper = styled.View`
-    margin-top: 50px;
+    margin-top: 30px;
     width:100%;
 `
 
