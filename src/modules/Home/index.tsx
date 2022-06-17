@@ -4,8 +4,8 @@ import useDBMovies from '@hooks/useDBMovies';
 import { Background } from '@components/Background';
 import {Header} from '@components/Header/Index';
 import {HorizontalCarousel} from '@components/HorizontalCarousel';
-import * as Styled from './styles';
 import {theme} from '@global/styles/theme'
+import * as Styled from './styles';
 
 
 
@@ -35,12 +35,11 @@ const Home: React.FC = () => {
     bootstrap();
   }, [getLastestMovies]);
 
-
   return (
       <Background>
         <Styled.Container>
-            <Styled.Wrapper>
-              <Header />
+            <Header />
+            <Styled.Wrapper showsVerticalScrollIndicator={false}>
               {loading? (
                 <ActivityIndicator color={theme.colors.primary} />
               ) : (
