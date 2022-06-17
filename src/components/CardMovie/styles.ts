@@ -22,6 +22,8 @@ export const Title = styled.Text`
 `
 
 export const RateWrapper = styled.View `
+    align-items: center;
+    justify-content: center;
     margin-top:auto;
     flex-direction: row;
     width: 95%;
